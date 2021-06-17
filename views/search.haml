@@ -1,7 +1,11 @@
-%h4 Colleges
+%h4 Search Colleges
 
-%p
-  %a{href: '/'} New Search
+%form{ action: "/search", method: 'post', 'accept-charset' => 'UTF-8'}
+  .field
+    %label College:
+    %input#search{ type: 'text', name: 'college[name]', value: params[:college][:name] }
+    %input{ name: 'commit', type: 'submit', value: 'Search' }
+%br
 
 - @results.each do |result|
   :ruby
@@ -10,7 +14,8 @@
     school_name = result['school.name']
     school_city = result['school.city']
     school_state = result['school.state']
-    gmaps_url = "https://www.google.com/maps/embed/v1/place?key=#{GOOGLE_MAPS_API_KEY}&q=#{school_name}&center=#{lat},#{lon}"
+    query_string = Rack::Utils.build_query({ key: GOOGLE_MAPS_API_KEY, q: school_name, center: "#{lat},#{lon}" })
+    gmaps_url = "https://www.google.com/maps/embed/v1/place?#{query_string}"
 
   %p
     = "#{school_name}, #{school_city}, #{school_state}"
