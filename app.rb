@@ -4,8 +4,8 @@ require 'haml'
 require 'httparty'
 require 'pry-nav' unless ENV['RACK_ENV'] == 'production'
 
-DATA_GOV_API_KEY = ENV['data_gov_api_key']
-GOOGLE_MAPS_API_KEY = ENV['google_maps_api_key']
+DATA_GOV_API_KEY = ENV['DATA_GOV_API_KEY']
+GOOGLE_MAPS_API_KEY = ENV['GOOGLE_MAPS_API_KEY']
 DATA_GOV_SCHOOL_BASE_URL = 'https://api.data.gov/ed/collegescorecard/v1/schools.json'.freeze
 
 class App < Roda
