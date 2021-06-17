@@ -1,1 +1,5 @@
-%h1 Hello World
+%h4 Search Colleges
+%form{ action: "/search", method: 'post', 'accept-charset' => 'UTF-8'}
+  .field
+    %label College
+    %input#search{type: 'text', name: 'college[name]'}

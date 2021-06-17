@@ -10,6 +10,8 @@ gem 'uglifier', '~> 4.2' # JS compressor
 gem 'thin', '~> 1.8', require: false # Use Thin as the webserver
 gem 'rake', '> 10.0'
 
+gem 'httparty', '~> 0.18.1'
+
 group :development do
-  gem 'shotgun', '~> 0.9.2'
+  gem 'shotgun', '~> 0.9.2', require: false
 end

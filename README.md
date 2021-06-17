@@ -1,4 +1,4 @@
-# Simple Roda Boilerplate
+# College Search
 
 To setup your local environment to run this, ensure you have Ruby 2+ installed,
 then install dependencies by running:
