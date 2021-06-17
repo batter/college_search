@@ -13,5 +13,7 @@ gem 'rake', '> 10.0'
 gem 'httparty', '~> 0.18.1'
 
 group :development do
+  gem 'irb', require: false
   gem 'shotgun', '~> 0.9.2', require: false
+  gem 'pry-nav', '~> 0.2'
 end
