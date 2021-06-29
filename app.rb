@@ -37,7 +37,8 @@ class App < Roda
     # GET /
     r.root { view :index }
 
-    r.post 'search' do
+    # GET /search
+    r.get 'search' do
       query_string = Rack::Utils.build_query({
         api_key: DATA_GOV_API_KEY,
         _fields: 'id,school.name,location.lat,location.lon,school.state,school.city',
