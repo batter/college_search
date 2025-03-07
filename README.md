@@ -9,7 +9,7 @@ $ bundle
 
 ##### Configure API Keys:
 
-`ENV['DATA_GOV_API_KEY']` needs to have a valid API key from [College Scorecard](https://collegescorecard.ed.gov/data/documentation/)
+`ENV['DATA_GOV_API_KEY']` needs to have a valid API key from [College Scorecard](hhttps://collegescorecard.ed.gov/data/api-documentation/)
 
 `ENV['GOOGLE_MAPS_API_KEY']` needs to have a valid API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key)
 
